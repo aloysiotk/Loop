@@ -18,9 +18,9 @@ struct TaskView: View {
     
     var body: some View {
         Form {
-            Text(task.details)
-            addLoopSection
             loopDataSection
+            addLoopSection
+            Text(task.details)
             loopHistorySection
         }
         .navigationTitle(task.name)
@@ -55,7 +55,7 @@ struct TaskView: View {
     private var loopHistorySection: some View {
         Section("Loops History") {
             List(task.loops) { loop in
-                Text(loop.completionDate.description)
+                Text(loop.completionDate.formatted(date: .long, time: .shortened))
             }
         }
     }
