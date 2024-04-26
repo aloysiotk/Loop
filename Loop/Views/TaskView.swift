@@ -10,6 +10,7 @@ import SwiftData
 import Charts
 
 struct TaskView: View {
+    @Environment(\.modelContext) private var modelContext
     @Environment(NavigationPathHandler.self) private var pathHandler
     
     @Bindable var task: Task
@@ -40,22 +41,31 @@ struct TaskView: View {
     
     private var loopDataSection: some View {
         Section("Loops Data") {
-            Chart {
-                ForEach(task.loops) { loop in
-                    ForEach(loop.loopDatas) { loopData in
+            Chart(task.getChartData(), id: \.title) { data in
+                ForEach(data.loopDatas) { loopData in
+                    if let loop = loopData.loop {
                         LineMark(x: .value("date", loop.completionDate), y: .value("value", Double(loopData.value) ?? 4))
                     }
                 }
+                .foregroundStyle(by: .value("Measurement", data.title))
             }
-            .chartXAxis(.hidden)
             .frame(height: 200)
         }
     }
     
     private var loopHistorySection: some View {
-        Section("Loops History") {
-            List(task.loops) { loop in
-                Text(loop.completionDate.formatted(date: .long, time: .shortened))
+        let sortedLoops = task.loops.sorted(by: {$0.completionDate < $1.completionDate})
+        
+        return Section("Loops History") {
+            List() {
+                ForEach(sortedLoops) { loop in
+                    NavigationLink(value: loop) {
+                        Text(loop.completionDate.formatted(date: .long, time: .shortened))
+                    }
+                }
+                .onDelete(perform: { indexSet in
+                    modelContext.delete(sortedLoops[indexSet.first!])
+                })
             }
         }
     }

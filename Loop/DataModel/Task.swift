@@ -106,3 +106,31 @@ final class Task: Codable {
         try container.encode(tags, forKey: .tags)
     }
 }
+
+extension Task {
+    func getChartData() -> [(title: String, loopDatas: [LoopData])] {
+        
+        var data = [(title: String, loopDatas: [LoopData])]()
+        
+        for measurement in self.measurements {
+            data.append((measurement.name, getLoopDatas(forMeasurement: measurement)))
+        }
+        
+        return data
+    }
+    
+    private func getLoopDatas(forMeasurement measurement: Measurement) -> [LoopData] {
+        guard let modelContext else { return []}
+        
+        do {
+            return try modelContext.fetch(FetchDescriptor<LoopData>( 
+                predicate: #Predicate<LoopData> { $0.measurement.id == measurement.id },
+                sortBy: [SortDescriptor(\.loop?.completionDate)]
+            ))
+        } catch {
+            print("[getLoopDatas(forMeasurement:)] - Error fetching LoopDatas")
+            return []
+        }
+    }
+    
+}
