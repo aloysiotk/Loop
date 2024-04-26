@@ -2,7 +2,7 @@
 //  LoopApp.swift
 //  Loop
 //
-//  Created by Aloysio Tiscoski on 4/25/24.
+//  Created by Aloysio Tiscoski on 4/16/24.
 //
 
 import SwiftUI
@@ -10,9 +10,13 @@ import SwiftData
 
 @main
 struct LoopApp: App {
+    @State private var notificationManager = NotificationManager()
+    @State private var alertHandler = AlertHandler()
+    @State private var pathHandler = NavigationPathHandler()
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Loop.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -24,9 +28,16 @@ struct LoopApp: App {
     }()
 
     var body: some Scene {
-        WindowGroup {
+        MockData.insertSampleDataIfNeeded(modelContext: sharedModelContainer.mainContext)
+        
+        return WindowGroup {
             ContentView()
         }
         .modelContainer(sharedModelContainer)
+        .environment(notificationManager)
+        .environment(alertHandler)
+        .environment(pathHandler)
     }
+    
+    
 }

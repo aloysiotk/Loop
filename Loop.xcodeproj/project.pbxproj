@@ -7,14 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75A30E8C2BDACD1800B13F6E /* LoopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30E8B2BDACD1800B13F6E /* LoopApp.swift */; };
-		75A30E8E2BDACD1800B13F6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30E8D2BDACD1800B13F6E /* ContentView.swift */; };
-		75A30E902BDACD1800B13F6E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30E8F2BDACD1800B13F6E /* Item.swift */; };
 		75A30E922BDACD1900B13F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A30E912BDACD1900B13F6E /* Assets.xcassets */; };
 		75A30E952BDACD1900B13F6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A30E942BDACD1900B13F6E /* Preview Assets.xcassets */; };
 		75A30E9F2BDACD1900B13F6E /* LoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30E9E2BDACD1900B13F6E /* LoopTests.swift */; };
 		75A30EA92BDACD1900B13F6E /* LoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EA82BDACD1900B13F6E /* LoopUITests.swift */; };
 		75A30EAB2BDACD1900B13F6E /* LoopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EAA2BDACD1900B13F6E /* LoopUITestsLaunchTests.swift */; };
+		75A30EC22BDACD9100B13F6E /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EB72BDACD9100B13F6E /* AlertHandler.swift */; };
+		75A30EC32BDACD9100B13F6E /* EnumPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EB82BDACD9100B13F6E /* EnumPicker.swift */; };
+		75A30EC42BDACD9100B13F6E /* LabeledTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EB92BDACD9100B13F6E /* LabeledTextEditor.swift */; };
+		75A30EC52BDACD9100B13F6E /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EBA2BDACD9100B13F6E /* LabeledTextField.swift */; };
+		75A30EC62BDACD9100B13F6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EBC2BDACD9100B13F6E /* ContentView.swift */; };
+		75A30EC72BDACD9100B13F6E /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EBD2BDACD9100B13F6E /* EditTaskView.swift */; };
+		75A30EC82BDACD9100B13F6E /* GroupGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EBE2BDACD9100B13F6E /* GroupGridView.swift */; };
+		75A30EC92BDACD9100B13F6E /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EBF2BDACD9100B13F6E /* TaskListView.swift */; };
+		75A30ECA2BDACD9100B13F6E /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EC02BDACD9100B13F6E /* TaskView.swift */; };
+		75A30ECC2BDACD9700B13F6E /* LoopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ECB2BDACD9700B13F6E /* LoopApp.swift */; };
+		75A30ECE2BDACD9F00B13F6E /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ECD2BDACD9F00B13F6E /* MockData.swift */; };
+		75A30ED12BDACDB200B13F6E /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ECF2BDACDB200B13F6E /* NotificationManager.swift */; };
+		75A30ED22BDACDB200B13F6E /* NavigationPathHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED02BDACDB200B13F6E /* NavigationPathHandler.swift */; };
+		75A30EDB2BDACDC000B13F6E /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED32BDACDC000B13F6E /* Enums.swift */; };
+		75A30EDC2BDACDC000B13F6E /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED42BDACDC000B13F6E /* Group.swift */; };
+		75A30EDD2BDACDC000B13F6E /* Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED52BDACDC000B13F6E /* Loop.swift */; };
+		75A30EDE2BDACDC000B13F6E /* LoopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED62BDACDC000B13F6E /* LoopData.swift */; };
+		75A30EDF2BDACDC000B13F6E /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED72BDACDC000B13F6E /* Measurement.swift */; };
+		75A30EE02BDACDC000B13F6E /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED82BDACDC000B13F6E /* Tag.swift */; };
+		75A30EE12BDACDC000B13F6E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED92BDACDC000B13F6E /* Task.swift */; };
+		75A30EE32BDB01A100B13F6E /* EditLoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EE22BDB01A100B13F6E /* EditLoopView.swift */; };
+		75A30EE52BDB0D9300B13F6E /* EditMeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EE42BDB0D9300B13F6E /* EditMeasurementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +55,6 @@
 
 /* Begin PBXFileReference section */
 		75A30E882BDACD1800B13F6E /* Loop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loop.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		75A30E8B2BDACD1800B13F6E /* LoopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopApp.swift; sourceTree = "<group>"; };
-		75A30E8D2BDACD1800B13F6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		75A30E8F2BDACD1800B13F6E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		75A30E912BDACD1900B13F6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A30E942BDACD1900B13F6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75A30E9A2BDACD1900B13F6E /* LoopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +62,28 @@
 		75A30EA42BDACD1900B13F6E /* LoopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A30EA82BDACD1900B13F6E /* LoopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopUITests.swift; sourceTree = "<group>"; };
 		75A30EAA2BDACD1900B13F6E /* LoopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		75A30EB72BDACD9100B13F6E /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		75A30EB82BDACD9100B13F6E /* EnumPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumPicker.swift; sourceTree = "<group>"; };
+		75A30EB92BDACD9100B13F6E /* LabeledTextEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledTextEditor.swift; sourceTree = "<group>"; };
+		75A30EBA2BDACD9100B13F6E /* LabeledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
+		75A30EBC2BDACD9100B13F6E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		75A30EBD2BDACD9100B13F6E /* EditTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		75A30EBE2BDACD9100B13F6E /* GroupGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupGridView.swift; sourceTree = "<group>"; };
+		75A30EBF2BDACD9100B13F6E /* TaskListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		75A30EC02BDACD9100B13F6E /* TaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		75A30ECB2BDACD9700B13F6E /* LoopApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopApp.swift; sourceTree = "<group>"; };
+		75A30ECD2BDACD9F00B13F6E /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		75A30ECF2BDACDB200B13F6E /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		75A30ED02BDACDB200B13F6E /* NavigationPathHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPathHandler.swift; sourceTree = "<group>"; };
+		75A30ED32BDACDC000B13F6E /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		75A30ED42BDACDC000B13F6E /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		75A30ED52BDACDC000B13F6E /* Loop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loop.swift; sourceTree = "<group>"; };
+		75A30ED62BDACDC000B13F6E /* LoopData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopData.swift; sourceTree = "<group>"; };
+		75A30ED72BDACDC000B13F6E /* Measurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		75A30ED82BDACDC000B13F6E /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		75A30ED92BDACDC000B13F6E /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		75A30EE22BDB01A100B13F6E /* EditLoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLoopView.swift; sourceTree = "<group>"; };
+		75A30EE42BDB0D9300B13F6E /* EditMeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMeasurementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +134,12 @@
 		75A30E8A2BDACD1800B13F6E /* Loop */ = {
 			isa = PBXGroup;
 			children = (
-				75A30E8B2BDACD1800B13F6E /* LoopApp.swift */,
-				75A30E8D2BDACD1800B13F6E /* ContentView.swift */,
-				75A30E8F2BDACD1800B13F6E /* Item.swift */,
+				75A30ECB2BDACD9700B13F6E /* LoopApp.swift */,
+				75A30EC12BDACD9100B13F6E /* Views */,
+				75A30EDA2BDACDC000B13F6E /* DataModel */,
+				75A30ED02BDACDB200B13F6E /* NavigationPathHandler.swift */,
+				75A30ECF2BDACDB200B13F6E /* NotificationManager.swift */,
+				75A30ECD2BDACD9F00B13F6E /* MockData.swift */,
 				75A30E912BDACD1900B13F6E /* Assets.xcassets */,
 				75A30E932BDACD1900B13F6E /* Preview Content */,
 			);
@@ -128,6 +169,46 @@
 				75A30EAA2BDACD1900B13F6E /* LoopUITestsLaunchTests.swift */,
 			);
 			path = LoopUITests;
+			sourceTree = "<group>";
+		};
+		75A30EBB2BDACD9100B13F6E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				75A30EB72BDACD9100B13F6E /* AlertHandler.swift */,
+				75A30EB82BDACD9100B13F6E /* EnumPicker.swift */,
+				75A30EB92BDACD9100B13F6E /* LabeledTextEditor.swift */,
+				75A30EBA2BDACD9100B13F6E /* LabeledTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		75A30EC12BDACD9100B13F6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75A30EBB2BDACD9100B13F6E /* Components */,
+				75A30EBC2BDACD9100B13F6E /* ContentView.swift */,
+				75A30EBE2BDACD9100B13F6E /* GroupGridView.swift */,
+				75A30EBF2BDACD9100B13F6E /* TaskListView.swift */,
+				75A30EC02BDACD9100B13F6E /* TaskView.swift */,
+				75A30EBD2BDACD9100B13F6E /* EditTaskView.swift */,
+				75A30EE22BDB01A100B13F6E /* EditLoopView.swift */,
+				75A30EE42BDB0D9300B13F6E /* EditMeasurementView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		75A30EDA2BDACDC000B13F6E /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				75A30ED42BDACDC000B13F6E /* Group.swift */,
+				75A30ED92BDACDC000B13F6E /* Task.swift */,
+				75A30ED52BDACDC000B13F6E /* Loop.swift */,
+				75A30ED62BDACDC000B13F6E /* LoopData.swift */,
+				75A30ED72BDACDC000B13F6E /* Measurement.swift */,
+				75A30ED82BDACDC000B13F6E /* Tag.swift */,
+				75A30ED32BDACDC000B13F6E /* Enums.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +341,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75A30E8E2BDACD1800B13F6E /* ContentView.swift in Sources */,
-				75A30E902BDACD1800B13F6E /* Item.swift in Sources */,
-				75A30E8C2BDACD1800B13F6E /* LoopApp.swift in Sources */,
+				75A30ECA2BDACD9100B13F6E /* TaskView.swift in Sources */,
+				75A30EC32BDACD9100B13F6E /* EnumPicker.swift in Sources */,
+				75A30EE52BDB0D9300B13F6E /* EditMeasurementView.swift in Sources */,
+				75A30EC62BDACD9100B13F6E /* ContentView.swift in Sources */,
+				75A30EDC2BDACDC000B13F6E /* Group.swift in Sources */,
+				75A30ECC2BDACD9700B13F6E /* LoopApp.swift in Sources */,
+				75A30EDB2BDACDC000B13F6E /* Enums.swift in Sources */,
+				75A30EC42BDACD9100B13F6E /* LabeledTextEditor.swift in Sources */,
+				75A30EDE2BDACDC000B13F6E /* LoopData.swift in Sources */,
+				75A30EC72BDACD9100B13F6E /* EditTaskView.swift in Sources */,
+				75A30ED22BDACDB200B13F6E /* NavigationPathHandler.swift in Sources */,
+				75A30ED12BDACDB200B13F6E /* NotificationManager.swift in Sources */,
+				75A30EE02BDACDC000B13F6E /* Tag.swift in Sources */,
+				75A30EE12BDACDC000B13F6E /* Task.swift in Sources */,
+				75A30EC22BDACD9100B13F6E /* AlertHandler.swift in Sources */,
+				75A30EC82BDACD9100B13F6E /* GroupGridView.swift in Sources */,
+				75A30EC52BDACD9100B13F6E /* LabeledTextField.swift in Sources */,
+				75A30EE32BDB01A100B13F6E /* EditLoopView.swift in Sources */,
+				75A30EDF2BDACDC000B13F6E /* Measurement.swift in Sources */,
+				75A30ECE2BDACD9F00B13F6E /* MockData.swift in Sources */,
+				75A30EC92BDACD9100B13F6E /* TaskListView.swift in Sources */,
+				75A30EDD2BDACDC000B13F6E /* Loop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
