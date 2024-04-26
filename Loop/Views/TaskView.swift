@@ -40,14 +40,14 @@ struct TaskView: View {
     
     private var loopDataSection: some View {
         Section("Loops Data") {
-            Chart {
-                ForEach(task.loops) { loop in
-                    ForEach(loop.loopDatas) { loopData in
+            Chart(task.getChartData(), id: \.title) { data in
+                ForEach(data.loopDatas) { loopData in
+                    if let loop = loopData.loop {
                         LineMark(x: .value("date", loop.completionDate), y: .value("value", Double(loopData.value) ?? 4))
                     }
                 }
             }
-            .chartXAxis(.hidden)
+            //.chartXAxis(.hidden)
             .frame(height: 200)
         }
     }
