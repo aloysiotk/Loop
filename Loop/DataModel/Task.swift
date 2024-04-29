@@ -109,12 +109,13 @@ final class Task: Codable {
 
 extension Task {
     func getChartData() -> [(title: String, loopDatas: [LoopData])] {
-        
         var data = [(title: String, loopDatas: [LoopData])]()
         
         for measurement in self.measurements {
             data.append((measurement.name, getLoopDatas(forMeasurement: measurement)))
         }
+        
+        print("Data: \(data)")
         
         return data
     }

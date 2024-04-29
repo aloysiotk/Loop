@@ -49,6 +49,7 @@ struct TaskView: View {
                 }
                 .foregroundStyle(by: .value("Measurement", data.title))
             }
+            //.chartXAxis(.hidden)
             .frame(height: 200)
         }
     }
