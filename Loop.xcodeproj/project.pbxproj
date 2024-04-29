@@ -34,6 +34,7 @@
 		75A30EE12BDACDC000B13F6E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30ED92BDACDC000B13F6E /* Task.swift */; };
 		75A30EE32BDB01A100B13F6E /* EditLoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EE22BDB01A100B13F6E /* EditLoopView.swift */; };
 		75A30EE52BDB0D9300B13F6E /* EditMeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EE42BDB0D9300B13F6E /* EditMeasurementView.swift */; };
+		75A30EE82BE0430B00B13F6E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A30EE72BE0430B00B13F6E /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		75A30ED92BDACDC000B13F6E /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		75A30EE22BDB01A100B13F6E /* EditLoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLoopView.swift; sourceTree = "<group>"; };
 		75A30EE42BDB0D9300B13F6E /* EditMeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMeasurementView.swift; sourceTree = "<group>"; };
+		75A30EE72BE0430B00B13F6E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				75A30ED02BDACDB200B13F6E /* NavigationPathHandler.swift */,
 				75A30ECF2BDACDB200B13F6E /* NotificationManager.swift */,
 				75A30ECD2BDACD9F00B13F6E /* MockData.swift */,
+				75A30EE62BE042FA00B13F6E /* Extensions */,
 				75A30E912BDACD1900B13F6E /* Assets.xcassets */,
 				75A30E932BDACD1900B13F6E /* Preview Content */,
 			);
@@ -209,6 +212,14 @@
 				75A30ED32BDACDC000B13F6E /* Enums.swift */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		75A30EE62BE042FA00B13F6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75A30EE72BE0430B00B13F6E /* Array.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +358,7 @@
 				75A30EC62BDACD9100B13F6E /* ContentView.swift in Sources */,
 				75A30EDC2BDACDC000B13F6E /* Group.swift in Sources */,
 				75A30ECC2BDACD9700B13F6E /* LoopApp.swift in Sources */,
+				75A30EE82BE0430B00B13F6E /* Array.swift in Sources */,
 				75A30EDB2BDACDC000B13F6E /* Enums.swift in Sources */,
 				75A30EC42BDACD9100B13F6E /* LabeledTextEditor.swift in Sources */,
 				75A30EDE2BDACDC000B13F6E /* LoopData.swift in Sources */,

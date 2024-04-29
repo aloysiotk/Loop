@@ -30,8 +30,10 @@ final class Loop: Codable, Identifiable {
         
         task.loops.append(self)
         
-        task.measurements.forEach { measurement in
-            self.loopDatas.append(LoopData(measurement: measurement))
+        for measurement in task.measurements {
+            let loopData = LoopData()
+            self.loopDatas.append(loopData)
+            measurement.loopDatas.append(loopData)
         }
     }
     
@@ -47,5 +49,15 @@ final class Loop: Codable, Identifiable {
         try container.encode(id, forKey: .id)
         try container.encode(completionDate, forKey: .completionDate)
         try container.encode(loopDatas, forKey: .loopDatas)
+    }
+}
+
+extension Loop {
+    func delete() {
+        loopDatas.forEach { loopData in
+            loopData.measurement?.loopDatas.removeAll(where: {$0.id == loopData.id})
+        }
+        
+        modelContext?.delete(self)
     }
 }

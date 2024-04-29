@@ -12,7 +12,7 @@ import SwiftData
 final class LoopData: Codable, Identifiable{
     var id: UUID
     var loop: Loop?
-    var measurement: Measurement
+    var measurement: Measurement?
     var value: String
     
     enum CodingKeys: CodingKey {
@@ -22,23 +22,20 @@ final class LoopData: Codable, Identifiable{
         case value
     }
     
-    init(measurement: Measurement, value: String = "") {
+    init(value: String = "") {
         self.id = UUID()
-        self.measurement = measurement
         self.value = value
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(UUID.self, forKey: .id)
-        measurement = try container.decode(Measurement.self, forKey: .measurement)
         value = try container.decode(String.self, forKey: .value)
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(id, forKey: .id)
-        try container.encode(measurement, forKey: .measurement)
         try container.encode(value, forKey: .value)
     }
 }

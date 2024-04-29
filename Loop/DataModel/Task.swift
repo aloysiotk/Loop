@@ -108,30 +108,9 @@ final class Task: Codable {
 }
 
 extension Task {
-    func getChartData() -> [(title: String, loopDatas: [LoopData])] {
-        var data = [(title: String, loopDatas: [LoopData])]()
-        
-        for measurement in self.measurements {
-            data.append((measurement.name, getLoopDatas(forMeasurement: measurement)))
-        }
-        
-        print("Data: \(data)")
-        
-        return data
-    }
+    var sortedLoops: [Loop] {loops.sorted(by: {$0.completionDate < $1.completionDate})}
     
-    private func getLoopDatas(forMeasurement measurement: Measurement) -> [LoopData] {
-        guard let modelContext else { return []}
-        
-        do {
-            return try modelContext.fetch(FetchDescriptor<LoopData>( 
-                predicate: #Predicate<LoopData> { $0.measurement.id == measurement.id },
-                sortBy: [SortDescriptor(\.loop?.completionDate)]
-            ))
-        } catch {
-            print("[getLoopDatas(forMeasurement:)] - Error fetching LoopDatas")
-            return []
-        }
+    func deleteLoops(inOffset offset: IndexSet) {
+        offset.forEach { i in sortedLoops[i].delete()}
     }
-    
 }

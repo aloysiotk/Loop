@@ -22,8 +22,8 @@ struct EditLoopView: View {
     private var loopDataSection: some View {
         Section("Loop Data") {
             List($loop.loopDatas) { $loopData in
-                let keyboardType: UIKeyboardType? = loopData.measurement.type == .number ? .decimalPad : nil
-                LabeledTextField("\(loopData.measurement.name)", value: $loopData.value, keyboardType: keyboardType)
+                let keyboardType: UIKeyboardType? = loopData.measurement?.type == .number ? .decimalPad : nil
+                LabeledTextField("\(loopData.measurement?.name ?? "")", value: $loopData.value, keyboardType: keyboardType)
             }
         }
     }

@@ -41,32 +41,27 @@ struct TaskView: View {
     
     private var loopDataSection: some View {
         Section("Loops Data") {
-            Chart(task.getChartData(), id: \.title) { data in
-                ForEach(data.loopDatas) { loopData in
+            Chart(task.measurements) { measurement in
+                ForEach(measurement.loopDatas.sorted) { loopData in
                     if let loop = loopData.loop {
                         LineMark(x: .value("date", loop.completionDate), y: .value("value", Double(loopData.value) ?? 4))
                     }
                 }
-                .foregroundStyle(by: .value("Measurement", data.title))
+                .foregroundStyle(by: .value("Measurement", measurement.name))
             }
-            //.chartXAxis(.hidden)
             .frame(height: 200)
         }
     }
     
     private var loopHistorySection: some View {
-        let sortedLoops = task.loops.sorted(by: {$0.completionDate < $1.completionDate})
-        
         return Section("Loops History") {
             List() {
-                ForEach(sortedLoops) { loop in
+                ForEach(task.sortedLoops) { loop in
                     NavigationLink(value: loop) {
                         Text(loop.completionDate.formatted(date: .long, time: .shortened))
                     }
                 }
-                .onDelete(perform: { indexSet in
-                    modelContext.delete(sortedLoops[indexSet.first!])
-                })
+                .onDelete(perform: { indexSet in task.deleteLoops(inOffset: indexSet)})
             }
         }
     }
