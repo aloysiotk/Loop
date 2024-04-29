@@ -49,7 +49,7 @@ struct EditTaskView: View {
             DatePicker("Start At:", selection: $task.startingAt).fontWeight(.semibold)
             LabeledTextField("How many loops?", value: $task.loopCount, format: .number)
             LabeledTextField("Repeat every", value: $task.recurrence, format: .number)
-            EnumPicker(label: "How many", selection: $task.recurrenceUnit)
+            EnumPicker(label: "Repetition unit", selection: $task.recurrenceUnit)
             
         }
     }
