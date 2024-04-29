@@ -2,7 +2,7 @@
 
 <img width="431" alt="Screenshot 2024-04-26 at 2 31 01 AM" src="https://github.com/aloysiotk/Loop/assets/31860999/9bb54a9d-1ba5-4e13-ba02-9b93ec0cfb11">
 
-<img width="422" alt="Screenshot 2024-04-29 at 10 58 53 AM" src="https://github.com/aloysiotk/Loop/assets/31860999/6ff34d0f-5438-47be-8533-ef759a458358">
+<img width="429" alt="Screenshot 2024-04-29 at 11 14 21 AM" src="https://github.com/aloysiotk/Loop/assets/31860999/a41e7740-7d46-471e-866c-85e9c5dd8a84">
 
 <img width="427" alt="Screenshot 2024-04-29 at 11 11 39 AM" src="https://github.com/aloysiotk/Loop/assets/31860999/321bded9-ce7d-4358-a494-d1d466d85a41">
 
